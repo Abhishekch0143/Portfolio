@@ -10,48 +10,31 @@
     <link rel="stylesheet" type="text/css" href="contact.css">
     <title>Contact-me-form</title>
 </head>
-
 <body>
     <div class="container">
         <header>Let's Talk</header>
-        <div>
+        <div class="form">
             <div class="name">
-                <div class="block">First Name</div>
-                <div class="block"><input type="text"></div>
-                <div class="block">Last Name</div>
-                <div class="block"><input type="text"></div>
-            </div>
-            <div>Email</div>
-            <div><input type="email"></div>
-            <div>Message</div>
-            <div><textarea></textarea></div>
-            <div><input type="submit" value="submit"></div>
-
+                <div class="block">
+                    <label for="fname">First Name</label><br>
+                    <input type="text" name="fname" id="fname" autofocus="off" required>
+                </div>
+                <div class="block">
+                    <label for="lname">Last Name </label><br>
+                    <input type="text" name="lname" id="lname" required>
+                </div>
+            </div><br><br>
+            <div class="email">
+                <label for="email">E-mail</label><br>
+                <input type="email" name="emaid" id="email">
+            </div><br><br>
+            <div class="message">
+                <label for="message">Message</label><br><br>
+                <textarea name="message" id="message" placeholder="Text something here..."></textarea>
+            </div><br><br>
+            <input type="submit" value="Send">
         </div>
     </div>
 </body>
 
 </html>
-
-<!--<div class="form-container">
-    <div class="content-1">
-        <div class="block">
-            <label for="fname">First Name</label><br>
-            <input type="text" name="fname" id="fname" required>
-        </div>
-        <div class="block">
-            <label for="lname">Last Name </label><br>
-            <input type="text" name="lname" id="lname" required>
-        </div>
-    </div><br><br>
-    <div>
-        <label for="email">E-mail</label><br>
-        <input type="email" name="emaid" id="email">
-    </div><br><br>
-    <div>
-        <label for="message">Message</label><br>
-        <textarea name="message" id="message"></textarea>
-    </div><br><br>
-    <input type="submit" value="Send">
-    </div>
- -->

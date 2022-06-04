@@ -1,0 +1,31 @@
+body {
+    padding: 10vw 15vw;
+    background-color: #e6dace;
+
+}
+
+header {
+    text-align: center;
+    font-size: 3rem;
+    font-family: audiowide;
+}
+
+.detail {
+    text-align: center;
+}
+
+.info {
+    padding: 2rem;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.title {
+    margin-top: 2rem;
+}
