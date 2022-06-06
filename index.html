@@ -15,66 +15,70 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div>
-            <a href="#" class="logo"><span class="name"> Abhishek Chauhan </span> <span id="cse">/ CSE Student</span></a>
-        </div>
-        <div class="tab">
-            <div><a href="contact.html" target="_blank">CONTACT ME</a></div>
-            <div><a href="project1.html">PROJECTS</a></div>
-            <div><a href="resume.html" target="_blank">RESUME</a></div>
-            <div><a href="#">ABOUT ME</a></div>
-        </div>
+    <div id="myNav" class="navbar">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <ul>
+            <li class="logo"><a href="#">Abhishek Chauhan</a></li>
+            <li class="item"><a href="#">ABOUT ME</a></li>
+            <li class="item"><a href="resume.html" target="_blank">RESUME</a></li>
+            <li class="item"><a href="project1.html" target="_blank">PROJECTS</a></li>
+            <li class="item"><a href="contact.html" target="_blank">CONTACT ME</a></li>
+        </ul>
     </div>
+    <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span> -->
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 
 
     <!-- Section part -->
 
     <div class="section">
-        <div class="item1"></div>
-
-
-        <!-- Code for the profile card  -->
-
-        <div class="item2">
-            <div class="container-1">
-                <img src="/Images/MY_edit01.jpg" alt="my_profile_pic" class="profile-pic">
-                <h3>Abhishek Chauhan</h3>
-                <hr class="line">
-                <h5>Computer Science Student</h5>
-            </div>
-            <div class="container-2">
-                <a href="https://www.facebook.com/profile.php?id=100037534352828"><i
-                        class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://twitter.com/Abhishe92661084"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/abhishek-chauhan-07aaa11b9/"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/abhishek_4uhh/"><i class="fa-brands fa-instagram"></i></a>
-                <!-- <a href="https://github.com/Abhishekch0143"><i class="fa-brands fa-github"></i></a> -->
-            </div>
-        </div>
-
-
-        <!-- Code for the Right section -->
-
-        <div class="item3">
-            <div class="container-3">
-                <div class="title">
-                    <h1>Hello</h1>
-                    <h2>Here who I am & What I do</h2>
+        <span class="block"></span>
+        <div class="card">
+            <div class="item2">
+                <div class="container-1">
+                    <img src="/Images/MY_edit01.jpg" alt="my_profile_pic" class="profile-pic">
+                    <h3>Abhishek Chauhan</h3>
+                    <hr class="line">
+                    <h5>Computer Science Student</h5>
                 </div>
-                <div class="btn-container">
-                    <a href="resume.html" class="btn-1">RESUME</a>
-                    <a href="project1.html" class="btn-2">PROJECT</a>
+                <div class="container-2">
+                    <a href="https://www.facebook.com/profile.php?id=100037534352828"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Abhishe92661084"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/abhishek-chauhan-07aaa11b9/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/abhishek_4uhh/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Abhishekch0143"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <div class="para">
-                    I am a front-end developer having decent knowledge of HTML , CSS , C , C++ & Python and further
-                    learning Javascript. <br>
-                    3rd Year Student Of Dronacharya College of Engineering.
+            </div>
+
+            <div class="item3">
+                <div class="container-3">
+                    <div class="title">
+                        <h1>Hello</h1>
+                        <h2>Here who I am & What I do</h2>
+                    </div>
+                    <div class="btn-container">
+                        <a href="resume.html" class="btn-1">RESUME</a>
+                        <a href="project1.html" class="btn-2">PROJECT</a>
+                    </div>
+                    <div class="para">
+                        I am a front-end developer having decent knowledge of HTML , CSS , C , C++ & Python and further
+                        learning Javascript. <br>
+                        3rd Year Student Of Dronacharya College of Engineering.
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
 
