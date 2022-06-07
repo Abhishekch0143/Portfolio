@@ -15,13 +15,16 @@ body {
     position: -webkit-sticky;
     top: 0;
     z-index: 2;
+    width: 100%;
 }
+
 .navbar ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
     list-style-type: none;
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -94,12 +97,13 @@ body {
     display: flex;
     flex-flow: column wrap;
     width: 100%;
+    position: relative;
 }
 
 .block {
     background-color: #e6dace;
     width: 40%;
-    height: 126.1%;
+    height: 100%;
     position: absolute;
 }
 
@@ -114,6 +118,7 @@ body {
     margin-bottom: 13%;
     width: 53rem;
 }
+
 .item2 {
     display: flex;
     flex-flow: column wrap;
@@ -179,7 +184,8 @@ body {
 }
 
 .item3 {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    margin-left: 2rem;
 }
 
 .container-3 {
@@ -261,7 +267,6 @@ body {
 
 
 
-
 /* Designing for the footer */
 
 
@@ -306,11 +311,70 @@ body {
 @media only screen and (max-width: 480px) {
     /* For mobile */
 
+    /* Designing of the Navigation-bar */
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo a {
+        text-align: center !important;
+    }
+
+
+    .logo a {
+        font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif !important;
+        font-size: 2.5rem !important;
+        text-shadow: 3px 4px 5px rgb(187, 182, 254) !important;
+        letter-spacing: 0.3em !important;
+        padding: 0.5rem !important;
+    }
+
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 800px) {
     /* For Tablets */
 
+    /* Designing of the Navigation-bar */
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo a {
+        text-align: center !important;
+    }
+
+
+    .logo a {
+        font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif !important;
+        font-size: 2.5rem !important;
+        text-shadow: 3px 4px 5px rgb(187, 182, 254) !important;
+        letter-spacing: 0.3em !important;
+        padding: 0.5rem !important;
+    }
+
+    .card {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25%;
+        margin-left: 25%;
+        margin-bottom: 25%;
+        width: 25rem;
+    }
+    .block {
+        width: 50%;
+    }
+
+    .title, .para {
+        display: none;
+    }
+    .item3 {
+        margin-left: 0.1rem;
+    }
 }
 
 
