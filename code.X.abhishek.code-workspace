@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "Learn C++ Programming",
+			"path": "d:\\Learn C++ Programming"
+		},
+		{
+			"name": "Learn Python Programming",
+			"path": "d:\\Learn Python Programming"
+		},
+		{
+			"name": "Learn_C programming",
+			"path": "d:\\Learn_C programming"
+		},
+		{
+			"name": "Web Development",
+			"path": "d:\\Web Development"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Web Development",
+		"editor.inlayHints.fontSize": 0,
+		"editor.tabSize": 4,
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}
