@@ -127,6 +127,7 @@ body {
     overflow: hidden;
     color: black;
     box-shadow: -1rem 1rem 2.2rem rgb(201, 184, 184);
+    user-select: none;
 }
 
 .item2 .container-1 {
@@ -134,8 +135,6 @@ body {
 }
 
 .item2 .container-1 .profile-pic {
-    display: block;
-    height: auto;
     width: 13rem;
     border-radius: 50%;
     margin-top: 3.5rem;
@@ -186,6 +185,7 @@ body {
 .item3 {
     /* background-color: rgb(255, 255, 255); */
     margin-left: 2rem;
+    user-select: none;
 }
 
 .container-3 {

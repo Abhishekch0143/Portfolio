@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 10% 25%;
-    background-image: url('/Portfolio/images/template-2.jpg');
+    background-image: url('../images/template-2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:cover;
