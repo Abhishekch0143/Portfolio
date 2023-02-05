@@ -4,48 +4,51 @@
     margin: 0;
 }
 
-body {
-    margin: 0;
-}
+/*************** Navigation Bar CSS **************/
 
-/* Designing of the Navigation-bar */
-
-.navbar {
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    padding-left: 1rem;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index: 2;
-    width: 100%;
+    z-index: 3;
 }
 
-.navbar ul {
+.logo a {
+    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-shadow: 3px 4px 5px rgb(187, 182, 254);
+    letter-spacing: 0.3rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch;
     list-style-type: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
 }
 
-.navbar ul li a {
+nav ul li a {
     position: relative;
     display: block;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
-    padding: 1.5rem 1.8rem;
+    padding: 1.2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
-.navbar ul li a::before {
+nav ul li a::before {
     content: '';
     position: absolute;
-    bottom: 0.8rem;
+    bottom: 0.8em;
     left: 0;
     width: 100%;
     height: 0.1rem;
@@ -55,126 +58,92 @@ body {
     transition: transform 0.4s;
 }
 
-.navbar ul li a:hover:not(.logo a):before {
+nav ul li a:hover:not(.logo a):before {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.navbar ul li.logo a:hover {
-    text-decoration: none !important;
-}
-
-.logo a {
-    order: 0;
-    flex-grow: 4;
-    margin-left: 1rem;
-    text-align: left !important;
-}
-
-.logo {
-    order: 0;
-    flex-grow: 4;
-}
-
-.item {
-    order: 1;
-}
-
-.logo a {
-    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif !important;
-    font-size: 1.7rem !important;
-    text-shadow: 3px 4px 5px rgb(187, 182, 254) !important;
-    letter-spacing: 0.3em !important;
-    padding: 0.5rem !important;
-}
-
-
-
-
-/* Designing the Section part */
-
-.section {
+/*************** Section CSS **************/
+section {
+    position: relative;
     display: flex;
     flex-flow: column wrap;
     width: 100%;
-    position: relative;
 }
 
-.block {
-    background-color: #e6dace;
+section .container {
+    position: absolute;
     width: 40%;
     height: 100%;
-    position: absolute;
+    background-color: #e6dace;
 }
-
-/* Designing of the profile card*/
 
 .card {
     z-index: 1;
     display: flex;
     flex-direction: row;
-    margin-top: 13%;
-    margin-left: 20%;
-    margin-bottom: 13%;
-    width: 53rem;
+    margin: 13% auto 13% 20%;
+    width: 60%;
 }
 
-.item2 {
+.profile {
     display: flex;
     flex-flow: column wrap;
-    width: 25rem;
+    width: 24rem;
     text-align: center;
     overflow: hidden;
     color: black;
     box-shadow: -1rem 1rem 2.2rem rgb(201, 184, 184);
     user-select: none;
+    height: 10%;
 }
 
-.item2 .container-1 {
+.profile-label {
     background-color: #f4ece6;
+    font-size: 1.002vw;
 }
 
-.item2 .container-1 .profile-pic {
-    width: 13rem;
+.card .profile .profile-label img {
+    width: 13em;
     border-radius: 50%;
-    margin-top: 3.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3.5em auto auto auto;
 }
 
-.item2 h3 {
+.card .profile .profile-label .name {
     text-align: center;
     text-shadow: 2px 1px 10px rgb(180, 187, 231);
-    margin-top: 1.9rem;
+    margin-top: 1.5em;
     font-size: 1.9em;
     font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
     font-weight: 900;
-    letter-spacing: 0.3rem;
+    letter-spacing: .3em;
 }
 
-.line {
+.card .profile .profile-label .hr-line {
     width: 30%;
-    border: 0.03rem solid rgb(82, 82, 221);
-    margin: 1rem auto 1rem auto;
+    border: 0.03em solid rgb(82, 82, 221);
+    margin: 1em auto 1em auto;
 }
 
-.item2 h5 {
+.card .profile .profile-label .role {
     text-align: center;
     text-transform: uppercase;
-    padding: 0.5rem 0 3rem 0;
-    font-size: 1rem;
+    padding: .5em 0 3em 0;
+    font-size: 1em;
     font-family: 'Ubuntu', sans-serif, Arial, Helvetica, sans-serif;
-    letter-spacing: 0.1rem;
+    letter-spacing: .1em;
+    font-weight: 600;
 }
 
-.item2 .container-2 {
+.profile .social-media-profile {
     display: flex;
     flex-flow: row wrap;
     background-color: white;
     justify-content: center;
-    height: 3.2rem;
-    padding-top: 0.3rem;
+    height: 3.2em;
+    padding-top: 0.3em;
 }
+
 
 .fa-brands {
     padding: 0.5em;
@@ -182,199 +151,122 @@ body {
     color: black;
 }
 
-.item3 {
-    /* background-color: rgb(255, 255, 255); */
+.about-me {
     margin-left: 2rem;
     user-select: none;
+    max-width: 50%;
+    padding: 2rem;
+    font-size: 1.002vw;
+    height: 1%;
+
 }
 
-.container-3 {
-    height: 10rem;
-    max-width: 30rem;
-    padding: 1rem;
-}
-
-.item3 .container-3 .title h1 {
-    font-size: 6rem;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 1rem;
-}
-
-.item3 .container-3 .title h2 {
+.card .about-me p {
     font-size: 1.9rem;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
-.item3 .container-3 .btn-container {
-    padding-top: 3rem;
+.card .about-me p::first-line {
+    font-size: 2.8em;
+    font-weight: bold;
 }
 
-.item3 .container-3 .btn-container a.btn-1 {
+.card .about-me .btn-container {
+    padding: 3em 0;
+}
+
+.card .about-me .btn-container a.resume-btn {
     text-decoration: none;
     background-color: #0040ca;
     color: white;
-    padding: 0.7rem 2.7rem;
+    padding: 0.7em 2.7em;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.88rem;
-    border-radius: 5rem;
+    font-size: 0.88em;
+    border-radius: 5em;
     border: none;
     cursor: pointer;
-    margin-right: 1rem;
+    margin-right: 1em;
 }
 
-.item3 .container-3 .btn-container a.btn-2 {
+.card .about-me .btn-container a.project-btn {
     text-decoration: none;
     background-color: white;
     color: black;
-    padding: 0.6rem 2.7rem;
+    padding: 0.6em 2.7em;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.88rem;
-    border: 0.09rem solid black;
-    border-radius: 5rem;
+    font-size: 0.88em;
+    border: 0.09em solid black;
+    border-radius: 5em;
     cursor: pointer;
 }
 
-.item3 .container-3 .btn-container a.btn-1:hover {
+.card .about-me .btn-container a.resume-btn:hover {
     background-color: white;
     color: black;
-    border: 0.1rem solid #0040ca;
+    border: 0.1em solid #0040ca;
     transition: 0.5s;
 }
 
-.item3 .container-3 .btn-container a.btn-2:hover {
+.card .about-me .btn-container a.project-btn:hover {
     background-color: #0040ca;
     color: white;
-    border: 0.1rem solid #0040ca;
+    border: 0.1em solid #0040ca;
     transition: 0.5s;
 }
 
-
-.item3 .container-3 .para {
-    font-family: 'Pompiere', cursive;
-    padding-top: 3rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
+.card .about-me .bio {
+    font-family: 'Pompiere', cursive, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    line-height: 1.5em;
 }
 
+/*************** Footer CSS **************/
 
-
-
-
-
-
-
-
-
-
-
-/* Designing for the footer */
-
-
-.footer {
+footer {
     display: flex;
+    flex-direction: row wrap;
     justify-content: space-between;
-    flex-direction: row-reverse;
     align-content: flex-end;
-    background-color: rgb(255, 255, 255);
     color: black;
-    font-size: 0.9rem;
+    font-size: .9rem;
     font-family: 'Ubuntu', sans-serif, Arial, Helvetica;
-    height: 3rem;
     padding: 1.6rem;
-    border-top: 0.001rem solid black;
+    /* border-top: 0.001rem solid black;  */
+    box-shadow: 2px 5px 10px rgb(143, 135, 135);
 }
 
-.fo-item {
-    font-weight: 900;
-    flex-grow: 0.6;
+.call, .write, .follow {
+    text-align: center;
 }
 
-.fo-item-para a {
+footer .other-links {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
+}
+
+footer .other-links div {
+    margin: 0 2em;
+}
+
+.footer-link {
     text-decoration: none;
     color: black;
 }
 
-.fo-item-para a:hover {
+.footer-link:hover {
     text-decoration: underline;
 }
 
-
-.fo-item-1 h3 {
-    text-align: center;
-}
-
-.fo-item-para {
-    text-align: center;
-}
-
-
 @media only screen and (max-width: 480px) {
     /* For mobile */
-
-    /* Designing of the Navigation-bar */
-
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .logo a {
-        text-align: center !important;
-    }
-
-
-    .logo a {
-        font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif !important;
-        font-size: 2.5rem !important;
-        text-shadow: 3px 4px 5px rgb(187, 182, 254) !important;
-        letter-spacing: 0.3em !important;
-        padding: 0.5rem !important;
-    }
 
 }
 
 @media only screen and (max-width: 800px) {
     /* For Tablets */
 
-    /* Designing of the Navigation-bar */
-
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .logo a {
-        text-align: center !important;
-    }
-
-
-    .logo a {
-        font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif !important;
-        font-size: 2.5rem !important;
-        text-shadow: 3px 4px 5px rgb(187, 182, 254) !important;
-        letter-spacing: 0.3em !important;
-        padding: 0.5rem !important;
-    }
-
-    .card {
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        margin-top: 25%;
-        margin-left: 25%;
-        margin-bottom: 25%;
-        width: 25rem;
-    }
-    .block {
-        width: 50%;
-    }
-
-    .title, .para {
-        display: none;
-    }
-    .item3 {
-        margin-left: 0.1rem;
-    }
 }
 
 
