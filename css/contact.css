@@ -171,8 +171,9 @@ footer {
     font-size: .9rem;
     font-family: 'Ubuntu', sans-serif, Arial, Helvetica;
     padding: 1.6rem;
+    background-color: #ffffff;
     /* border-top: 0.001rem solid black;  */
-    box-shadow: 2px 5px 10px rgb(143, 135, 135);
+    box-shadow: 2px 5px 10px rgb(151, 94, 94);
 }
 
 .call, .write, .follow {
