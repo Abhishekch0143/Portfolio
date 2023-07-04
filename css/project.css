@@ -1,158 +1,67 @@
+@import "navbar.css";
+@import "footer.css";
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-/*************** Navigation Bar CSS **************/
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: #000000;
-    padding-left: 1rem;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 3;
-}
-
-.logo a {
-    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    text-shadow: 3px 4px 5px rgb(187, 182, 254);
-    letter-spacing: 0.3rem;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style-type: none;
-    overflow: hidden;
-}
-
-nav ul li a {
-    position: relative;
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    text-align: center;
-    padding: 1.2rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* font-size: 1rem; */
-}
-
-nav ul li a::before {
-    content: '';
-    position: absolute;
-    bottom: 0.8em;
-    left: 0;
-    width: 100%;
-    height: 0.1rem;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.4s;
-}
-
-nav ul li a:hover:not(.logo a):before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
 /* Code for the project part */
 
-.project-container {
-    padding: 10%;
+main {
     background-color: #e6dace;
-
 }
 
-header {
+h1 {
     text-align: center;
-    font-size: 3rem;
-    font-family: audiowide;
+    font-size: 2rem;
+    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;mily: ;
+    letter-spacing: 3px;
 }
 
-.detail {
-    text-align: center;
-}
 
-.info {
-    padding: 2rem;
+h2 span {
+    color: #000000;
+    font-size: .6em;
 }
 
 .block {
     display: flex;
     flex-direction: row;
     background-color: white;
+    width: 50rem;
     height: 25rem;
     overflow: hidden;
+    margin: 8% auto;
+    box-shadow:  1em 1em 2em #dababa;
+    
 }
 
+
+
+.block p {
+    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
+    font-weight: 500    ;
+}
+
+.details {
+    padding: 5em 0;
+}
+
+.projectName{
+    display: flex;
+    text-align: center;
+    color: #4942E4;
+}
+
+
+
+.sideBar {
+    width: 8px;
+    height: 50px;
+    background-color: #4942E4;
+}
 .title {
     margin-top: 2rem;
-}
-
-
-/*************** Footer CSS **************/
-
-footer {
-    display: flex;
-    flex-direction: row wrap;
-    justify-content: space-between;
-    align-content: flex-end;
-    color: black;
-    font-size: .9rem;
-    font-family: 'Ubuntu', sans-serif, Arial, Helvetica;
-    padding: 1.6rem;
-    /* border-top: 0.001rem solid black;  */
-    box-shadow: 2px 5px 10px rgb(143, 135, 135);
-}
-
-.call, .write, .follow {
-    text-align: center;
-}
-
-footer .other-links {
-    display: flex;
-    flex-direction: row wrap;
-    justify-content: space-around;
-}
-
-footer .other-links div {
-    margin: 0 2em;
-}
-
-.footer-link {
-    text-decoration: none;
-    color: black;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
-}
-
-@media only screen and (max-width: 480px) {
-    /* For mobile */
-
-}
-
-@media only screen and (max-width: 800px) {
-    /* For Tablets */
-
-}
-
-
-@media only screen and (max-width: 1024px) {
-    /* For small screen Laptops */
-
-}
-
-@media only screen and (min-width: 1025px) {
-    /* For Large screen Laptops and Desktops */
-
 }
