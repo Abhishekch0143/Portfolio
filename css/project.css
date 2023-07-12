@@ -9,21 +9,16 @@
 
 /* Code for the project part */
 
-main {
+section {
     background-color: #e6dace;
+    padding: 5rem 20rem;
 }
 
 h1 {
     text-align: center;
     font-size: 2rem;
-    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;mily: ;
+    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
-}
-
-
-h2 span {
-    color: #000000;
-    font-size: .6em;
 }
 
 .block {
@@ -34,24 +29,34 @@ h2 span {
     height: 25rem;
     overflow: hidden;
     margin: 8% auto;
-    box-shadow:  1em 1em 2em #dababa;
-    
+    box-shadow: 3px 5px 10px #a2a2a2;
 }
 
+h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2em;
+    border-left: 10px solid #4942E4;
+    padding: .5em;
+}
 
+h2 a {
+    color: #4942E4;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
 
 .block p {
-    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
-    font-weight: 500    ;
+    font-family: 'Pompiere', cursive, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #000;
+    padding: 1.5em;
 }
 
-.details {
-    padding: 5em 0;
-}
-
-.projectName{
-    display: flex;
-    text-align: center;
+.block {
     color: #4942E4;
 }
 
@@ -62,6 +67,14 @@ h2 span {
     height: 50px;
     background-color: #4942E4;
 }
+
 .title {
     margin-top: 2rem;
+}
+
+.follow-profile a i {
+    /* width: 45px; */
+    color: #000;
+    font-size: 1rem;
+    padding: .5em;
 }

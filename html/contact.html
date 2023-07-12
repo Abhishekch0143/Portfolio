@@ -1,3 +1,4 @@
+<?php include "data.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,30 +31,40 @@
 
 
     <!-------------------form part of the web page-------------------->
-    <div class="container">
-        <header>Let's Talk</header>
-        <div class="form" action="../backend/data.php" method="post">
-            <div class="name">
+
+    <section>
+        <h1>Let's Talk</h1>
+        <form action="/backend/data.php" method="post">
+            <div class="name item">
                 <div class="block">
-                    <label for="fname">First Name</label>
+                    <label for="fname">First Name</label><br><br>
                     <input type="text" name="fname" id="fname" autofocus="off" required>
                 </div>
-                <div class="block">
-                    <label for="lname">Last Name </label>
+                <div class="block item">
+                    <label for="lname">Last Name </label><br><br>
                     <input type="text" name="lname" id="lname" required>
                 </div>
             </div>
-            <div class="email">
-                <label for="email">E-mail</label>
-                <input type="email" name="emaid" id="email" required>
+
+            <div class="email item">
+                <label for="email">Email</label><br><br>
+                <input type="text" name="email" id="email" autofocus="off" required>
             </div>
-            <div class="message">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Text something here..." required></textarea>
+
+            <div class="subject item">
+                <label for="subject">Subject</label><br><br>
+                <input type="text" name="subject" id="subject" autofocus="off" required>
             </div>
-            <input type="submit" value="Submit">
-        </div>
-    </div>
+
+            <div class="message item">
+                <label for="message">Message</label><br><br>
+                <textarea name="message" id="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" name="submit" value="submit">Send</button>
+        </form>
+    </section>
+
 
 
     <!-----------------------------Footer---------------------------->
@@ -63,7 +74,7 @@
             <div class="call">
                 <div>Call</div>
                 <div>
-                    <a href="call" class="footer-link">+91-9818887277</a>
+                    <a href="tel:9818887277" class="footer-link">+91-9818887277</a>
                 </div>
             </div>
             <div class="write">

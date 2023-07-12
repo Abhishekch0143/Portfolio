@@ -9,8 +9,9 @@
 }
 
 section {
-  padding: 15rem;
+  padding: 5rem 20rem;
   background-color: #e6dace;
+  user-select: none;
 }
 
 .resumePage {
@@ -28,7 +29,10 @@ header h1 {
 }
 
 header .contact_links a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #271b77;
+  padding: 1rem;
+
 }
 
 .qualification .line {
@@ -44,7 +48,8 @@ header .contact_links a {
   padding-left: 2rem;
 }
 
-.project .first_project + div {
+.project .first_project h4 {
+  display: inline;
 }
 
 .project ul {

@@ -4,9 +4,6 @@
     margin: 0;
 }
 
-body {
-    background-color: #e6dace;
-}
 /* 
 body {
     background-image: url('../images/template.jpg');
@@ -77,78 +74,93 @@ nav ul li a:hover:not(.logo a):before {
 
 /* form part design */
 
-.container {
-  display: inline-block;
-  margin: 5% 35%;
-  background-color: white;
-  border-radius: 0.1rem;
-  box-shadow: 1px 1px 15px rgb(175, 148, 148);
-  /* font-size: 1.5vw; */
+section {
+    background-color: #e6dace;
+    padding: 2rem 25rem;
 }
 
-header {
+h1 {
   text-align: center;
-  font-size: 2vw;
-  font-family: audiowide;
-  margin: 5% 0;
+  margin: 3em;
+  letter-spacing: 5px;
+  font-weight: 600;
+  font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
 }
 
-.form {
-  display: flex;
-  flex-flow: column;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5vw;
-  gap: 2rem;
-  padding: 3rem 3rem 5rem 3rem;
+form {
+  font-size: 1.2rem;
+  background-color: #fff;
+  padding: 5em 5em 8em 5em;
+  margin-bottom: 5rem;
+}
+
+form > div {
+  margin-bottom: 2em;
 }
 
 .name {
   display: flex;
-  flex-direction: column wrap;
-  gap: 5px;
+  justify-content: space-between;
 }
 
-input,
-textarea {
+.block {
+  width: 40%;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-size: .8em;
+  border-bottom: 1px solid #000;
+}
+
+.item input {
   width: 100%;
 }
 
-input[type="text"],
-input[type="email"] {
-  border: none;
-  border-bottom: 1.5px solid black;
-  outline: none;
-  padding: 0.1rem;
-  font-size: 1.4vw;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-  border-bottom: 1.5px solid blue;
-  color: #494040;
-}
-
 textarea {
   border: none;
-  border-bottom: 1.5px solid black;
+  border-bottom: 1px solid #000;
+  width: 100%;
   outline: none;
-  font-size: 1.4vw;
   resize: none;
-  line-height: 70%;
 }
 
-textarea:focus {
-  border-bottom: 0.1rem solid blue;
-  color: #494040;
-
+input[type="text"]:focus, input[type="text"]:hover {
+  border-bottom: 2px solid #5f64ff;
 }
 
-input[type="submit"] {
-  background-color: blue;
-  border: none;
+
+button {
+  background-color: #5f64ff;
   color: white;
-  font-size: 1.5vw;
+  font-size: 1em;
+  padding: .5rem 1.8em;
+  border-radius: 1.8rem;
+  border: none;
+  cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*************** Footer CSS **************/
