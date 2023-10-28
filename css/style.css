@@ -1,6 +1,3 @@
-@import "navbar.css";
-@import "footer.css";
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -12,6 +9,67 @@ html {
     max-height: fit-content;
 }
 
+/*************** Navigation Bar CSS **************/
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: .5rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.logo a {
+    font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-shadow: 3px 4px 5px rgb(187, 182, 254);
+    letter-spacing: 0.3rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0.8em;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+nav ul li a:hover:not(.logo a)::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 
 /*************** Section CSS **************/
 section {
@@ -19,23 +77,26 @@ section {
     display: flex;
     flex-flow: column wrap;
     width: 100%;
-    /* margin: 10%; */
 }
 
 section .container {
     position: absolute;
-    width: 40%;
+    width: 40vw;
+    min-width: 1em;
     height: 100%;
     background-color: #e6dace;
 }
 
 .card {
     z-index: 1;
+}
+
+.card-inner {
     display: flex;
     user-select: none;
     justify-content: center;
     align-items: center;
-    margin:  12%;
+    margin: 12%;
 }
 
 .left_item {
@@ -45,13 +106,13 @@ section .container {
     box-shadow: -.41rem .5rem 2rem rgb(201, 184, 184);
 }
 
-.card .left_item img {
+.card .card-inner .left_item img {
     width: 13em;
     border-radius: 15em;
     margin: 3.5em auto 1.5em auto;
 }
 
-.card .left_item .name {
+.card .card-inner .left_item .name {
     text-align: center;
     text-shadow: 2px 1px 10px rgb(180, 187, 231);
     padding: .5em;
@@ -61,13 +122,13 @@ section .container {
     letter-spacing: .3em;
 }
 
-.card .left_item .hr-line {
+.card .card-inner .left_item .hr-line {
     width: 30%;
     border: 0.03em solid rgb(82, 82, 221);
     margin: 1em auto 1em auto;
 }
 
-.card .left_item .role {
+.card .card-inner .left_item .role {
     text-align: center;
     text-transform: uppercase;
     padding: .5em 0 3em 0;
@@ -95,22 +156,22 @@ section .container {
     width: 50%;
 }
 
-.card .right_item p {
-    font-size: 1.9rem;
+.card .card-inner .right_item p {
+    font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
 }
 
-.card .right_item p::first-line {
+.card .card-inner .right_item p::first-line {
     font-size: 2.8em;
     font-weight: bold;
 }
 
-.card .right_item .btn-container {
+.card .card-inner .right_item .btn-container {
     padding: 3em 0;
 }
 
-.card .right_item .btn-container a.resume-btn {
+.card .card-inner .right_item .btn-container a.resume-btn {
     text-decoration: none;
     background-color: #0040ca;
     color: white;
@@ -123,34 +184,201 @@ section .container {
     margin-right: 1em;
 }
 
-.card .right_item .btn-container a.project-btn {
+.card .card-inner .right_item .btn-container a.project-btn {
     text-decoration: none;
     background-color: white;
     color: black;
     padding: 0.6em 2.7em;
+    border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.88em;
-    border: 0.09em solid black;
     border-radius: 5em;
     cursor: pointer;
 }
 
-.card .right_item .btn-container a.resume-btn:hover {
+.card .card-inner .right_item .btn-container a.resume-btn:hover {
     background-color: white;
     color: black;
     border: 0.1em solid #0040ca;
     transition: 0.5s;
 }
 
-.card .right_item .btn-container a.project-btn:hover {
+.card .card-inner .right_item .btn-container a.project-btn:hover {
     background-color: #0040ca;
     color: white;
     border: 0.1em solid #0040ca;
     transition: 0.5s;
 }
 
-.card .right_item .bio {
+.card .card-inner .right_item .bio {
     font-family: 'Pompiere', cursive, Arial, Helvetica, sans-serif;
     font-size: 2em;
     line-height: 1.5em;
+}
+
+/*************** Footer CSS **************/
+footer {
+    font-size: 0.9rem;
+    font-family: 'Ubuntu', sans-serif, Arial, Helvetica;
+    padding: 1rem;
+    box-shadow: 2px 5px 10px rgb(143, 135, 135);
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-container {
+    text-align: center;
+    margin: 1rem;
+}
+
+.link-container div a {
+    text-decoration: none;
+    color: black;
+}
+
+.link-container div a:hover {
+    text-decoration: underline;
+}
+
+.follow-profile a i {
+    font-size: 1rem;
+    padding: 0.5em;
+}
+
+/****** Media queries for responsiveness ******/
+@media only screen and (max-width: 480px) {
+    /* For mobile screens */
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    section .container {
+        width: 50%;
+
+    }
+
+    .card {
+        perspective: 1000px;
+        /* Define the perspective for 3D effect */
+        width: 180px;
+        height: 220px;
+        position: relative;
+        margin: 20% 0 20% 25%;
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+        /* Flip the card on hover */
+    }
+
+    .left_item,
+    .right_item {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    .left_item {
+        transform: rotateY(0deg);
+    }
+
+    .right_item {
+        transform: rotateY(180deg);
+        /* Initially hidden on the back */
+    }
+
+    /* Style for the back of the card */
+    .right_item {
+        background-color: #f4ece6;
+        padding: 6em;
+        text-align: center;
+        transform: rotateY(180deg);
+    }
+
+    .card .card-inner .left_item img {
+        width: 25em;
+    }
+
+    .card .card-inner .left_item .name {
+        font-size: 3.1em;
+    }
+
+    .card .card-inner .left_item .hr-line {
+        width: 40%;
+    }
+
+    .card .card-inner .left_item .role {
+        font-size: 2em;
+    }
+
+    .fa-brands {
+        font-size: 3em;
+    }
+
+    .card .card-inner .right_item p {
+        font-size: 3em;
+    }
+
+    .card .card-inner .right_item .btn-container a.resume-btn,
+    .card .card-inner .right_item .btn-container a.project-btn {
+        font-size: 1.3em;
+    }
+
+    .card .card-inner .right_item .bio {
+        font-size: 2.8em;
+    }
+
+    .footer-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-block {
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo a {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
 }

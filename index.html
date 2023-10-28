@@ -33,36 +33,38 @@
         <div class="container">
         </div>
         <div class="card">
-            <div class="left_item">
-                <div class="profile-picture">
-                    <img src="./images/profile_pic.jpg" alt="Abhishek's Profile picture">
+            <div class="card-inner">
+                <div class="left_item">
+                    <div class="profile-picture">
+                        <img src="./images/profile_pic.jpg" alt="Abhishek's Profile picture">
+                    </div>
+                    <div class="name">Abhishek Chauhan</div>
+                    <hr class="hr-line">
+                    <div class="role">Computer Science Student</div>
+                    <div class="social-media-profile">
+                        <a href="https://www.facebook.com/profile.php?id=100037534352828"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/Abhishe92661084"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/abhishek-chauhan-07aaa11b9/"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/abhishek_4uhh/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Abhishekch0143"><i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
-                <div class="name">Abhishek Chauhan</div>
-                <hr class="hr-line">
-                <div class="role">Computer Science Student</div>
-                <div class="social-media-profile">
-                    <a href="https://www.facebook.com/profile.php?id=100037534352828"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/Abhishe92661084"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/abhishek-chauhan-07aaa11b9/"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/abhishek_4uhh/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com/Abhishekch0143"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-            <div class="right_item">
-                <p>Hello <br> Here Who I am & What I do</p>
-                <div class="btn-container">
-                    <a href="./html/resume.html" class="resume-btn">RESUME</a>
-                    <a href="./html/project.html" class="project-btn">PROJECT</a>
-                </div>
-                <div class="bio">
-                    I am a Back-end developer
-                    having decent knowledge of
-                    HTML , CSS , Node.js, Express.js, MongoDB, C/C++ & Python
-                    and a DevOps Practitioner.
-                    <br>
-                    4th Year Student Of Dronacharya College of Engineering.
+                <div class="right_item">
+                    <p>Hello <br> Here Who I am & What I do</p>
+                    <div class="btn-container">
+                        <a href="./html/resume.html" class="resume-btn">RESUME</a>
+                        <a href="./html/project.html" class="project-btn">PROJECT</a>
+                    </div>
+                    <div class="bio">
+                        I am a Back-end developer
+                        having decent knowledge of
+                        Java, SQL , HTML , CSS , JavaScript
+                        and a DevOps Practitioner.
+                        <br>
+                        4th Year Student Of Dronacharya College of Engineering.
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,25 +73,25 @@
 
     <!-----------------------------Footer---------------------------->
     <footer>
-        <div class="copy-right">&copy; 2023 by Abhishek Chauhan.</div>
-        <div class="other-links">
-            <div class="call">
-                <div>Call</div>
+        <div class="footer-block">
+            <p>&copy; <span id="copyright-year"></span> by Abhishek Chauhan.</p>
+            <div class="link-container">
                 <div>
-                    <a href="tel:9818887277" class="footer-link">+91-9818887277</a>
+                    Call <br>
+                    <a href="tel:9818887277">+91-9818887277</a>
                 </div>
             </div>
-            <div class="write">
-                <div>Write</div>
+            <div class="link-container">
                 <div>
-                    <a href="mailto: abhishekchauhan4315@gmail.com"
-                        class="footer-link">abhishekchauhan4315@gmail.com</a>
+                    Write <br>
+                    <a href="mailto: abhishekchauhan4315@gmail.com">abhishekchauhan4315@gmail.com</a>
                 </div>
             </div>
-            <div class="follow">
-                <div>Follow</div>
-                <div class="follow-profile"><a href="https://www.facebook.com/profile.php?id=100037534352828"
-                        target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <div class="link-container">
+                <div class="follow-profile">
+                    Follow <br>
+                    <a href="https://www.facebook.com/profile.php?id=100037534352828" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://twitter.com/Abhichauhantwt" target="_blank"><i
                             class="fa-brands fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/abhishek-chauhan-07aaa11b9/" target="_blank"><i
@@ -100,4 +102,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        function updateCopyRightYear() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById("copyright-year").textContent = currentYear;
+        }
+        // Run the function when the page is fully loaded
+        window.addEventListener('load', updateCopyRightYear);
+    </script>
 </body>

@@ -9,7 +9,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Pompiere&family=Abel&family=Amatic+SC&family=Koulen&family=Audiowide&family=Roboto&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e2a187daaf.js" crossorigin="anonymous"></script>
     <title>Abhishek's Project</title>
 </head>
 
@@ -37,62 +36,67 @@
         <div class="block">
             <div class="details">
                 <h2><a href="#">ProjectFolio</a></h2>
-                <p>An Application to enhance college students network amoung themselves and increase the junior senior
-                    interaction.Through this program, students can receive community support for their projects from
-                    working professionals, alumni,
-                    senior teachers, and college students.
-                </p>
+                <p>An Application to enhance college students network among themselves and increase the junior senior
+                    interaction. Through this program, students can receive community support for their projects from
+                    working
+                    professionals, alumni, senior teachers, and college students.</p>
             </div>
-            <img src="../images/ProjectFolio_Image.png" alt="Project1_img">
+            <img src="../images/ProjectFolio_Image.png" alt="ProjectFolio Image">
         </div>
 
         <div class="block">
             <div class="details">
-                <h2><a href="https://github.com/Abhishekch0143/Restaurant-web-project" target="_blank">Restaurant Website</a></h2>
-                <p>This is a simple restaurant website using HTML & CSS using an user-friendly UI. This is one of the simple website using HTML and CSS.</p>
+                <h2><a href="https://abhishekch0143.github.io/Restaurant-web-project/" target="_blank">Restaurant
+                        Website</a></h2>
+                <p>This is a simple restaurant website using HTML & CSS using an user-friendly UI. This is one of the
+                    simple website using HTML and CSS.</p>
             </div>
-            <img src="../images/restaurant_website_img.png" alt="Project1_img">
+            <img src="../images/restaurant_website_img.png" alt="Restaurant project Image">
         </div>
 
         <div class="block">
             <div class="details">
-                <h2><a href="https://github.com/Abhishekch0143/NotesApp/tree/master/Backend" target="_blank">Notes maker</a></h2>
-                <p>This is the backend of the note making application where we can perform some basic application like insertion, deletion, listing of the notes.In this I used  Node.js as the backend and created the API's using Express.js and for the database I used MongoDB</p>
+                <h2><a href="https://github.com/Abhishekch0143/NotesApp/tree/master/Backend" target="_blank">Notes
+                        maker</a></h2>
+                <p>This is the backend of the note making application where we can perform some basic application like
+                    insertion, deletion, listing of the notes.In this I used Node.js as the backend and created the
+                    API's using Express.js and for the database I used MongoDB</p>
             </div>
-            <img src="../images/notes_images.jpg" alt="Project1_img">
+            <img src="../images/notes_images.jpg" alt="Notes Project Image">
         </div>
 
         <div class="block">
             <div class="details">
                 <h2><a href="https://github.com/Abhishekch0143/Weatherify" target="_blank">Weatherify</a></h2>
-                <p>This is the weather reporting wesite which gives the temperature and weather reoprt of different cities. I used HTML, CSS, JavaScript, Node.js, and weather API for making this project.</p>
+                <p>This is the weather reporting wesite which gives the temperature and weather reoprt of different
+                    cities. I used HTML, CSS, JavaScript, Node.js, and weather API for making this project.</p>
             </div>
-            <img src="../images/weather.png" alt="Project1_img">
+            <img src="../images/weather.png" alt="weather Project Image">
         </div>
 
     </section>
 
     <!-----------------------------Footer---------------------------->
     <footer>
-        <div class="copy-right">&copy; 2023 by Abhishek Chauhan.</div>
-        <div class="other-links">
-            <div class="call">
-                <div>Call</div>
+        <div class="footer-block">
+            <p>&copy; <span id="copyright-year"></span> by Abhishek Chauhan.</p>
+            <div class="link-container">
                 <div>
-                    <a href="tel:9818887277" class="footer-link">+91-9818887277</a>
+                    Call <br>
+                    <a href="tel:9818887277">+91-9818887277</a>
                 </div>
             </div>
-            <div class="write">
-                <div>Write</div>
+            <div class="link-container">
                 <div>
-                    <a href="mailto: abhishekchauhan4315@gmail.com"
-                        class="footer-link">abhishekchauhan4315@gmail.com</a>
+                    Write <br>
+                    <a href="mailto: abhishekchauhan4315@gmail.com">abhishekchauhan4315@gmail.com</a>
                 </div>
             </div>
-            <div class="follow">
-                <div>Follow</div>
-                <div class="follow-profile"><a href="https://www.facebook.com/profile.php?id=100037534352828"
-                        target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <div class="link-container">
+                <div class="follow-profile">
+                    Follow <br>
+                    <a href="https://www.facebook.com/profile.php?id=100037534352828" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://twitter.com/Abhichauhantwt" target="_blank"><i
                             class="fa-brands fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/abhishek-chauhan-07aaa11b9/" target="_blank"><i
@@ -103,6 +107,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        function updateCopyRightYear() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById("copyright-year").textContent = currentYear;
+        }
+        // Run the function when the page is fully loaded
+        window.addEventListener('load', updateCopyRightYear);
+    </script>
+    <script src="https://kit.fontawesome.com/e2a187daaf.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

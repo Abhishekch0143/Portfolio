@@ -23,9 +23,9 @@
         </div>
         <ul>
             <li><a href="../index.html">ABOUT ME</a></li>
-            <li><a href="./resume.html" target="_self">RESUME</a></li>
-            <li><a href="./project.html" target="_self">PROJECTS</a></li>
-            <li><a href="./contact.html" target="_self">CONTACT ME</a></li>
+            <li><a href="./resume.html">RESUME</a></li>
+            <li><a href="./project.html">PROJECTS</a></li>
+            <li><a href="./contact.html" class="active">CONTACT ME</a></li>
         </ul>
     </nav>
 
@@ -33,31 +33,32 @@
     <!-------------------form part of the web page-------------------->
 
     <section>
-        <h1>Let's Talk</h1>
+        <h1>Contact Me</h1>
         <form action="/backend/data.php" method="post">
             <div class="name item">
                 <div class="block">
-                    <label for="fname">First Name</label><br><br>
+                    <label for="fname">First Name</label>
                     <input type="text" name="fname" id="fname" autofocus="off" required>
                 </div>
                 <div class="block item">
-                    <label for="lname">Last Name </label><br><br>
+                    <label for="lname">Last Name</label>
                     <input type="text" name="lname" id="lname" required>
                 </div>
             </div>
 
             <div class="email item">
-                <label for="email">Email</label><br><br>
-                <input type="text" name="email" id="email" autofocus="off" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <!-- Use type="email" for better input validation -->
             </div>
 
             <div class="subject item">
-                <label for="subject">Subject</label><br><br>
-                <input type="text" name="subject" id="subject" autofocus="off" required>
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" required>
             </div>
 
             <div class="message item">
-                <label for="message">Message</label><br><br>
+                <label for="message">Message</label>
                 <textarea name="message" id="message" rows="5" required></textarea>
             </div>
 
@@ -65,29 +66,27 @@
         </form>
     </section>
 
-
-
     <!-----------------------------Footer---------------------------->
     <footer>
-        <div class="copy-right">&copy; 2023 by Abhishek Chauhan.</div>
-        <div class="other-links">
-            <div class="call">
-                <div>Call</div>
+        <div class="footer-block">
+            <p>&copy; <span id="copyright-year"></span> by Abhishek Chauhan.</p>
+            <div class="link-container">
                 <div>
-                    <a href="tel:9818887277" class="footer-link">+91-9818887277</a>
+                    Call <br>
+                    <a href="tel:9818887277">+91-9818887277</a>
                 </div>
             </div>
-            <div class="write">
-                <div>Write</div>
+            <div class="link-container">
                 <div>
-                    <a href="mailto: abhishekchauhan4315@gmail.com"
-                        class="footer-link">abhishekchauhan4315@gmail.com</a>
+                    Write <br>
+                    <a href="mailto: abhishekchauhan4315@gmail.com">abhishekchauhan4315@gmail.com</a>
                 </div>
             </div>
-            <div class="follow">
-                <div>Follow</div>
-                <div class="follow-profile"><a href="https://www.facebook.com/profile.php?id=100037534352828"
-                        target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <div class="link-container">
+                <div class="follow-profile">
+                    Follow <br>
+                    <a href="https://www.facebook.com/profile.php?id=100037534352828" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://twitter.com/Abhichauhantwt" target="_blank"><i
                             class="fa-brands fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/abhishek-chauhan-07aaa11b9/" target="_blank"><i
@@ -98,6 +97,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        function updateCopyRightYear() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById("copyright-year").textContent = currentYear;
+        }
+        // Run the function when the page is fully loaded
+        window.addEventListener('load', updateCopyRightYear);
+    </script>
+
 </body>
 
 </html>

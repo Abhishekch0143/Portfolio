@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Dosis:wght@200&family=Great+Vibes&family=Langar&family=League+Spartan:wght@200;300;400&family=Rubik&family=Yanone+Kaffeesatz:wght@400;500;600&display=swap");
-@import "navbar.css";
-@import "footer.css";
 
 * {
   box-sizing: border-box;
@@ -8,18 +6,84 @@
   margin: 0;
 }
 
+/*************** Navigation Bar CSS **************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: .5rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logo a {
+  font-family: 'Koulen', cursive, Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-shadow: 3px 4px 5px rgb(187, 182, 254);
+  letter-spacing: 0.3rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0.8em;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+nav ul li a:hover:not(.logo a)::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Main section styles */
 section {
-  padding: 5rem 20rem;
+  padding: 5rem 12rem;
+  /* Adjust padding for better responsiveness */
   background-color: #e6dace;
   user-select: none;
 }
 
+/* Resume page styles */
 .resumePage {
   background-color: #fff;
-  padding: 3rem 6rem;
+  padding: 3rem;
+  /* Adjust padding for better responsiveness */
   font-family: calibri;
 }
 
+/* Header styles */
 header {
   text-align: center;
 }
@@ -28,30 +92,141 @@ header h1 {
   font-size: 3rem;
 }
 
+/* Contact links styles */
 header .contact_links a {
   text-decoration: underline;
   color: #271b77;
   padding: 1rem;
-
 }
 
+/* Qualification styles */
 .qualification .line {
   display: flex;
   justify-content: space-between;
 }
 
+/* Common component styles */
 .component {
   margin: 1rem 0;
 }
 
+/* Experience styles */
 .experience ul {
   padding-left: 2rem;
 }
 
+/* Project styles */
 .project .first_project h4 {
   display: inline;
 }
 
+/* Project ul styles */
 .project ul {
   padding-left: 2rem;
+}
+
+
+/*************** Footer CSS **************/
+footer {
+  font-size: 0.9rem;
+  font-family: 'Ubuntu', sans-serif, Arial, Helvetica;
+  padding: 1rem;
+  box-shadow: 2px 5px 10px rgb(143, 135, 135);
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-container {
+  text-align: center;
+  margin: 1rem;
+}
+
+.link-container div a {
+  text-decoration: none;
+  color: black;
+}
+
+.link-container div a:hover {
+  text-decoration: underline;
+}
+
+.follow-profile a i {
+  font-size: 1rem;
+  padding: 0.5em;
+}
+
+/********************** Media queries ******************/
+
+@media only screen and (max-width: 480px) {
+
+  /* For mobile screens */
+  section {
+    padding: 2rem 1rem;
+    /* Further adjust padding for mobile screens */
+  }
+
+  .resumePage {
+    padding: 1rem;
+    /* Further adjust padding for mobile screens */
+  }
+
+  .footer-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-block {
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo a {
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  section {
+    padding: 5rem 1rem;
+    /* Adjust padding for smaller screens */
+  }
+
+  .resumePage {
+    padding: 2rem;
+    /* Adjust padding for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* For Tablets */
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+  /* For small screen Laptops */
+
+}
+
+@media only screen and (min-width: 1025px) {
+  /* For Large screen Laptops and Desktops */
+
 }
